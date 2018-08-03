@@ -44,7 +44,7 @@ print('Match items: ', len(items), 'in %f seconds'%(end-start))
 
 # get the count of each item
 pipeline = [
-	{"$group": {"_id": "$hardware_type", "count": { "$sum":1}}},
+	{"$group": {"_id": '$' + item_name, "count": { "$sum":1}}},
 	{"$sort": {"count": -1, "_id":1}}
 ]
 
