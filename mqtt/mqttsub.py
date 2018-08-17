@@ -23,6 +23,7 @@ def on_message(client, userdata, msg):
         client.publish("iot/switch/command/AA", "Command to AA with %d"%userdata['cmd'], 0) 
 
 client = mqtt.Client()
+client.username_pw_set('switch-x', '12345678')
 client.user_data_set(info)
 client.on_connect = on_connect
 client.on_message = on_message
