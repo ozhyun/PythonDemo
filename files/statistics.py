@@ -50,7 +50,7 @@ for app in applist:
 	#	app["recv_pkts"] + "/" + app["recv_pkts_ratio"] + " " + \
 	#	app["send_bytes"] + "/" + app["send_bytes_ratio"] + " " + \
 	#	app["send_pkts"] + "/" + app["send_pkts_ratio"] )
-	print("APP[{id}] : \tRecv {rbytes:*>10}KB/{rb_ratio:5.2f}  {rpkts:*>15}/{rpkts_ratio:>5.2f}| \tSend {tbytes:*>10}KB/{tb_ratio:>5.2f} \t{tpkts:*>15}/{tpkts_ratio:>5.2f}".format( \
+	print("APP[{id}]  \tRecv {rbytes:*>10}KB/{rb_ratio:5.2f}  {rpkts:*>15}/{rpkts_ratio:>5.2f}   ||   Send {tbytes:*>10}KB/{tb_ratio:>5.2f} {tpkts:*>15}/{tpkts_ratio:>5.2f}".format( \
 		id=app["id"], rbytes=app["recv_bytes"]//1024, rb_ratio=app["recv_bytes_ratio"], \
 		rpkts=app["recv_pkts"], rpkts_ratio=app["recv_pkts_ratio"], \
 		tbytes=app["send_bytes"]//1024, tb_ratio=app["send_bytes_ratio"], \
