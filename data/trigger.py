@@ -28,6 +28,7 @@ def send_logs(file, sock, addr):
 				logitem = line.split('CLIENT_LOG:')[1].strip()
 				#print(logitem)
 				ret = sock.sendto(logitem, addr)
+				time.sleep(0.1)
 			else:
 				break;
 
@@ -51,7 +52,7 @@ if argc == 2 :
 
 elif argc >= 3 :
 	ipaddr = sys.argv[1]
-	port = sys.argv[2]
+	port = int(sys.argv[2])
 else :
 	usage()
 	sys.exit()
