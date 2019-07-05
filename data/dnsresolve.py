@@ -22,8 +22,8 @@ def dns_resolve(dn):
 	try:
 		addr = socket.getaddrinfo(dn, None)
 		#print(addr)
-	except socket.err, err_msg:
-		print(err_msg)
+	except socket.error, e:
+		print(e)
 		return None
 
 	#print("There's {0} items".format(len(addr)))
